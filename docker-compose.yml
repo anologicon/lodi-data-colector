@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  data_collector:
+    build: .
+    command: python main.py
+    volumes:
+      - .:/app
+    environment:
+      - MINIO_URL=http://minio:9000
+
+networks:
+  default:
+    external:
+      name: lol-data
