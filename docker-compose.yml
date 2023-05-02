@@ -4,10 +4,8 @@ services:
   data_collector:
     build: .
     command: python main.py
-    volumes:
-      - .:/app
-    environment:
-      - MINIO_URL=http://minio:9000
+    env_file:
+      - ./.env
 
 networks:
   default:
