@@ -26,11 +26,12 @@ def main(args, api_service):
             summoners_data_list,
             writer,
         )
-        executor.submit(
-            api_service.fetch_match_timeline,
-            summoners_data_list,
-            writer,
-        )
+        # Removed temporarily
+        # executor.submit(
+        #     api_service.fetch_match_timeline,
+        #     summoners_data_list,
+        #     writer,
+        # )
 
 
 def __parse_args_setup():
